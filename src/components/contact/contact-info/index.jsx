@@ -8,16 +8,16 @@ const ContactInfo = () => {
         <div className="contact-info-box">
             <h4 className="contact-info-title">
                 I would be happy to answer any questions you may have about
-                freelance writing or content marketing!
+                freelancing or Web Design!
             </h4>
             <div className="contact-option-wrapper">
                 <div className="contact-option">
                     <FaPhoneAlt className="icon" />
-                    <span className="text">+91 1234567891</span>
+                    <span className="text">+91 9301742572</span>
                 </div>
                 <div className="contact-option">
                     <MdEmail className="icon" />
-                    <span className="text">example@gmail.com</span>
+                    <span className="text">ayushtiwari102003@gmail.com</span>
                 </div>
             </div>
         </div>
