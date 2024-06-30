@@ -1,0 +1,86 @@
+@import "../../../style-config/variable.scss";
+@import "../../../style-config/mixins.scss";
+
+.contact-info-box {
+    background-color: $black-lighter;
+    width: 100%;
+    max-width: 355px;
+    padding: 30px;
+    border-radius: 6px;
+    color: $gray;
+
+    @include small-screen {
+        max-width: none;
+        padding: 20px;
+    }
+
+    h4 {
+        @include typography(18px, 600, 34px);
+        margin-bottom: 20px;
+
+        @include small-screen {
+            @include typography(16px, 600, 28px);
+            margin-bottom: 15px;
+        }
+    }
+
+    .contact-option {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+
+        svg {
+            color: $yellow;
+            font-size: 16px;
+
+            @include small-screen {
+                font-size: 14px;
+            }
+        }
+
+        .text {
+            color: $white;
+            margin-left: 15px;
+            @include typography(16px, 400, 24px);
+
+            @include small-screen {
+                @include typography(14px, 400, 20px);
+            }
+        }
+    }
+}
+.contact-info-title {
+    @include transition-ease(300ms);
+
+    @include small-screen {
+        text-align: center;
+    }
+}
+
+.contact-option-wrapper {
+    @include small-screen {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.contact-option {
+    @include transition-ease(300ms);
+
+    @include small-screen {
+        margin: 10px 15px;
+    }
+
+    .icon {
+        @include transition-ease(300ms);
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+
+        .icon {
+            color: $white;
+        }
+    }
+}

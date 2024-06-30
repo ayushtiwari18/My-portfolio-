@@ -1,0 +1,99 @@
+@import "../../../style-config/variable.scss";
+@import "../../../style-config/mixins.scss";
+
+.query-form {
+    width: 100%;
+    max-width: calc(100% - 375px);
+    margin-left: 20px;
+
+    @include small-screen {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: -10px;
+    }
+
+    .input-field {
+        width: calc(50% - 20px);
+        margin: 10px;
+
+        @include small-screen {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        &.full-width {
+            width: 100%;
+        }
+
+        input,
+        .textarea {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            background-color: transparent;
+            outline: 0;
+            padding: 10px 20px;
+            color: $white;
+            @include typography(16px, 400, 24px);
+
+            @include small-screen {
+                @include typography(14px, 400, 20px);
+            }
+
+            &:focus {
+                border-color: $white;
+            }
+        }
+
+        input {
+            height: 57px;
+
+            @include small-screen {
+                height: 50px;
+            }
+        }
+
+        .textarea {
+            height: 120px;
+            resize: none;
+
+            @include small-screen {
+                height: 100px;
+            }
+        }
+
+        .errors {
+            color: $white;
+            @include typography(12px, 400, 18px);
+            margin-top: 5px;
+        }
+    }
+
+    &__submit {
+        outline: 0;
+        border: 0;
+        width: 100%;
+        max-width: 120px;
+        height: 47px;
+        background: $white;
+        border-radius: 6px;
+        @include typography(16px, 600, 24px);
+        margin: 20px 10px 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        @include small-screen {
+            max-width: 100%;
+            margin: 20px 0 10px;
+        }
+
+        &:hover {
+            background: darken($white, 10%);
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@import "../../../style-config/variable.scss";
+@import "../../../style-config/mixins.scss";
+
+.section {
+    padding: 100px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &.dark {
+        background-color: $black;
+    }
+
+    &.light {
+        background-color: $black-light;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .section-title {
+            width: 100%;
+            text-align: center;
+            color: $white;
+            max-width: 500px;
+            margin-bottom: 50px;
+
+            h2 {
+                @include typography(40px, 700, 1.2);
+                margin-bottom: 15px;
+
+                @include small-screen {
+                    @include typography(32px, 700, 1.2);
+                }
+
+                @include medium-screen {
+                    @include typography(36px, 700, 1.2);
+                }
+            }
+        }
+    }
+
+    @include small-screen {
+        padding: 50px 0;
+
+        .content {
+            padding: 0 15px;
+        }
+    }
+
+    @include medium-screen {
+        padding: 75px 0;
+
+        .content {
+            padding: 0 30px;
+        }
+    }
+}

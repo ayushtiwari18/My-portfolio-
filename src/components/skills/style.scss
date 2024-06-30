@@ -1,0 +1,67 @@
+@import "../../style-config/variable.scss";
+@import "../../style-config/mixins.scss";
+
+.skills-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+
+    @include small-screen {
+        flex-direction: column;
+    }
+
+    .left-col {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        @include small-screen {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 453px;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .right-col {
+        flex: 1;
+        color: $white;
+
+        @include small-screen {
+            width: 100%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            @include typography(28px, 600, 1.2);
+
+            @include small-screen {
+                @include typography(24px, 600, 1.2);
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                @include typography(16px, 400, 1.5);
+                margin-bottom: 15px;
+
+                @include small-screen {
+                    @include typography(14px, 400, 1.4);
+                }
+
+                b {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

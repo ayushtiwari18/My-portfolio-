@@ -1,0 +1,34 @@
+@import "../../style-config/variable.scss";
+@import "../../style-config/mixins.scss";
+
+.portfolio-content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include small-screen {
+        padding: 0 10px;
+    }
+}
+
+// You can add any additional styles specific to the Portfolio component here.
+// Most of the styles will be in the Filters and Showcase components.
+
+// If you want to add some spacing between the title and the content:
+.section-title {
+    margin-bottom: 40px;
+
+    @include small-screen {
+        margin-bottom: 30px;
+    }
+}
+
+// If you want to add some bottom padding to the section:
+#portfolio {
+    padding-bottom: 80px;
+
+    @include small-screen {
+        padding-bottom: 60px;
+    }
+}
