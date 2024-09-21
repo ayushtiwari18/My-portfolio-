@@ -72,7 +72,7 @@ const Skills = () => {
                         icon={<AiOutlineCloudDownload />}
                         action={() =>
                             window.open(
-                                "https://drive.google.com/file/d/1OBuW_ftr3zn7dgTvoBjTr1YbnMUY_SVg/view?usp=sharing"
+                                "https://drive.google.com/file/d/1FIWiol1MjMBbOA3GR_A6UJnipj5_67q_/view?usp=sharing"
                             )
                         }
                     />
